@@ -86,7 +86,7 @@ int main() {
     festival1.SetBudget(maxBudget);
 
 
-    Musician number1("Travis Scott", 1500000, 29);
+    /*Musician number1("Travis Scott", 1500000, 29);
     Musician number2("Tory Lanez", 750000, 28);
     Musician number3("A$AP Rocky", 1400000, 32);
     Musician number4("SAINt JHN", 800000, 34);
@@ -100,7 +100,7 @@ int main() {
     festival1.addMusician(number1);
     festival1.addMusician(number2);
     festival1.addMusician(number3);
-    festival1.addMusician(number4);
+    festival1.addMusician(number4);*/
   
     cout << "\nAdded " << festival1.getArtists().size() << " artist(s) in all." << endl;
 }
