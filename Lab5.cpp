@@ -3,8 +3,6 @@
 #include <vector>
 using namespace std;
 
-
-
 class Musician {
 private:
     string name;
@@ -25,8 +23,6 @@ public:
     int getAge() { return age; }
 };
 
-
-
 class MusicFestival {
 private:
     double budget = 0;
@@ -34,19 +30,19 @@ private:
     double currentBudget = 0;
 
 public:
-    void addMusician(Musician a) {
-        if (a.getFee() + currentBudget < budget) {
-            artists.push_back(a);
-            currentBudget = currentBudget + a.getFee();
-            cout << "Artist "<< a.getName() <<" has been succesfully added to the list." << endl;
+    void addMusician(Musician artist) {
+        if (artist.getFee() + currentBudget < budget) {
+            artists.push_back(artist);
+            currentBudget = currentBudget + artist.getFee();
+            cout << "Artist "<< artist.getName() <<" has been succesfully added to the list." << endl;
         }
         else {
-            cout << "We can not afford this artist, but we still have "<< budget - currentBudget << " dollars." << endl;
+            cout << "You can not afford this artist, but you still have "<< budget - currentBudget << " dollars." << endl;
         }
     }
-    void removeMusician(Musician a) {
+    void removeMusician(Musician artist) {
         artists.pop_back();
-        cout << "Artist " << a.getName() << " has been removed from the list." << endl;
+        cout << "Artist " << artist.getName() << " has been removed from the list." << endl;
     }
 
     vector <Musician> getArtists() { return artists; }
@@ -54,8 +50,7 @@ public:
         budget = maxBudget;
     }
 
-    MusicFestival() {
-    };
+    MusicFestival() {};
     MusicFestival(vector<Musician> artist1, double maxBudget) {
         int i = 0; 
         budget = maxBudget;
