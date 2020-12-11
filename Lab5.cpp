@@ -3,8 +3,6 @@
 #include <vector>
 using namespace std;
 
-
-
 class Musician {
     private:
         string name;
@@ -30,8 +28,6 @@ class Musician {
             return age;
         }
     };
-
-
 
 class MusicFestival {
     private:
@@ -66,13 +62,13 @@ class MusicFestival {
         };
         MusicFestival(vector<Musician> newArtists, double maxBudget) {
             int i = 0;
-            budget = maxBudget;
+            newMaxBudget = maxBudget;
             double newArtistsBudget = 0;
             for (i = 0; i < newArtists.size(); i++) {
                 newArtistsBudget = newArtistsBudget + newArtists.at(i).getFee();
 
             }
-            if (newArtistsBudget > budget) {
+            if (newArtistsBudget > newMaxBudget) {
                 cout << "You cant afford this artist." << endl;
             }
             else {
@@ -83,8 +79,6 @@ class MusicFestival {
         }
         ~MusicFestival() {};
     };
-
-
 
 int main() {
     double maxBudget = 0;
