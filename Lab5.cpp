@@ -27,7 +27,7 @@ class Musician {
         int getAge() {
             return age;
         }
-    };
+};
 
 class MusicFestival {
     private:
@@ -58,8 +58,7 @@ class MusicFestival {
             budget = maxBudget;
         }
 
-        MusicFestival() {
-        };
+        MusicFestival() {};
         MusicFestival(vector<Musician> newArtists, double maxBudget) {
             int i = 0;
             newMaxBudget = maxBudget;
@@ -78,7 +77,7 @@ class MusicFestival {
             }
         }
         ~MusicFestival() {};
-    };
+};
 
 int main() {
     double maxBudget = 0;
