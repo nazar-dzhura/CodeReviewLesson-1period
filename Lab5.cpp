@@ -54,20 +54,20 @@ class MusicFestival {
         vector <Musician> getArtists() {
             return artists;
         }
-        void setBudget(double maxBudget) {
-            budget = maxBudget;
+        void setBudget(double newBudget) {
+            budget = newBudget;
         }
 
         MusicFestival() {};
-        MusicFestival(vector<Musician> newArtists, double maxBudget) {
+        MusicFestival(vector<Musician> newArtists, double newBudget) {
             int i = 0;
-            newMaxBudget = maxBudget;
+            budget = newBudget;
             double newArtistsBudget = 0;
             for (i = 0; i < newArtists.size(); i++) {
                 newArtistsBudget = newArtistsBudget + newArtists.at(i).getFee();
 
             }
-            if (newArtistsBudget > newMaxBudget) {
+            if (newArtistsBudget > budget) {
                 cout << "You cant afford this artist." << endl;
             }
             else {
@@ -80,11 +80,11 @@ class MusicFestival {
 };
 
 int main() {
-    double maxBudget = 0;
+    double newBudget = 0;
     cout << "Enter available budget in dollars: \n" << endl;
-    cin >> maxBudget;
+    cin >> newBudget;
     MusicFestival festival1;
-    festival1.setBudget(maxBudget);
+    festival1.setBudget(newBudget);
 
     Musician number1("Travis Scott", 1500000, 29);
     Musician number2("Tory Lanez", 750000, 28);
